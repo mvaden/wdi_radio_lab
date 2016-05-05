@@ -2,7 +2,7 @@
 
 function(){
   angular
-    .module("somename1",[
+    .module("wdiRadio",[
       "ui.router"
     ])
     .config("somename2",[
@@ -39,6 +39,6 @@ function(){
         templateUrl: "js/songs/edit.html",
         controller: "SongsEditController",
         controllerAs: "SongsEditViewModel"
-      })
-    }
+      });
+    };
 }
