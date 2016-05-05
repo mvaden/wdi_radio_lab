@@ -13,6 +13,10 @@
       .state("homepage", {
         url:"/index",
         templateUrl: "js/songs/index.html"
+      })
+      .state("songsShow", {
+        url:"/songs/:id",
+        templateUrl: "js/songs/show.html"
       });
     }
 })();
