@@ -2,17 +2,28 @@
 
 (function(){
   angular
-    .module("wdiRadio", ["ui.router"]);
+    .module("wdiRadio", [
+      "ui.router"])
     .config([
       "$stateProvider",
       RouterFunction
-    ]);
+    ]).controller("SongsIndexController", [
+      SongsIndexControllerFunction
+    ])
+
+
+    function SongsIndexControllerFunction(){
+      // console.log("I'm the controller for songs index!");
+      this.songs = "These are some songs.";
+    }
 
     function RouterFunction($stateProvider){
       $stateProvider
       .state("homepage", {
-        url:"/index",
-        templateUrl: "js/songs/index.html"
+        url:"/songs",
+        templateUrl: "js/songs/index.html",
+        controller: "SongsIndexController",
+        controllerAs: "SongIndexViewModel"
       })
       .state("songsShow", {
         url:"/songs/:id",

@@ -2,12 +2,7 @@
 
 (function(){
   angular
-  .module("songs")
-  .controller("SongsIndexController", [
-    SongsIndexControllerFunction
-  ]);
+  .module("wdiRadio")
+  
 
-  function SongsIndexControllerFunction(){
-    console.log("I'm the controller for songs index!");
-  }
 }());
