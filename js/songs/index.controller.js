@@ -2,7 +2,7 @@
 
 (function(){
   angular
-  .module("wdiRadio")
-  
+  .module("wdiRadio");
+
 
 }());
