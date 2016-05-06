@@ -1,2 +1,5 @@
 <h2>This is the songs index!</h2>
-{{SongIndexViewModel.songs}}
+<div data-ng-repeat="song on SongIndexViewModel.songs">
+  <p><a data-ui-serf="songShow({$index})"{{song.title}}</a></p>
+</div>
+<!-- {{SongIndexViewModel.songs}} -->

@@ -8,13 +8,15 @@
       "$stateProvider",
       RouterFunction
     ]).controller("SongsIndexController", [
+      '$state',
       SongsIndexControllerFunction
-    ])
+    ]);
 
-
-    function SongsIndexControllerFunction(){
+    function SongsIndexControllerFunction($state){
       // console.log("I'm the controller for songs index!");
-      this.songs = "These are some songs.";
+      this.gotoIndex = function(){
+        $state.go("songIndex");
+      };
     }
 
     function RouterFunction($stateProvider){
