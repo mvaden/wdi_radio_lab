@@ -10,6 +10,6 @@
 
   function SongsShowControllerFunction($stateParams){
     // console.log($stateParams)
-    this.song = {};
+    this.song = songs[$stateParams.id];
   }
 }());
